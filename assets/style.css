@@ -9,6 +9,7 @@
     --html: #6AA4BC;
     --css: #BD92EA;
     --js: #FFCA28;
+    --php: #AE508D;
 }
 html {
     overflow-x: hidden;
@@ -111,6 +112,13 @@ body {
 .code-panel.js::before {
     content: 'js';
     background-color: var(--js);
+}
+.code-panel.php {
+    color: var(--php);
+}
+.code-panel.php::before {
+    content: 'php';
+    background-color: var(--php);
 }
 .code-panel code {
     font-family: 'Inconsolata', monospace !important;
