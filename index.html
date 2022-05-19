@@ -133,7 +133,7 @@ const scrollToElem = (elem) =&gt; {
             </div>
 
             <div class="item-card">
-                <button class="item-name">WEBP</button>
+                <button class="item-name">PHP POSTBACK</button>
                 <div class="item-content">
                     <div class="code-panel php">
                         <pre>
@@ -144,6 +144,34 @@ const scrollToElem = (elem) =&gt; {
 
 // а потом функция, которая передает этот клик в трекер
 $voluum_conv = file_get_contents("https://groasis-guaricet.xyz/postback?cid=".$_GET['click'].'&et=lead');
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <button class="item-name">JS CURRENT DATE</button>
+                <div class="item-content">
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+let today = new Date(); 
+let dd = String(today.getDate()).padStart(2, '0'); 
+let mm = String(today.getMonth() + 1).padStart(2, '0');
+let yyyy = today.getFullYear(); 
+today = mm + '/' + dd + '/' + yyyy; 
+let currentDate = document.querySelectorAll('.current-date'); 
+for (let i = 0; i < currentDate.length; i++) { currentDate[i].innerHTML = today; } 
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+let newData = new Date();
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+document.querySelector(".current-date").innerHTML = months[newData.getMonth()] + ' ' + newData.getDate();
                             </code>
                         </pre>
                     </div>
