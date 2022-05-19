@@ -1,3 +1,4 @@
+// Accordion
 var acc = document.getElementsByClassName("item-name");
 var i;
 
