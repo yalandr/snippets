@@ -536,6 +536,52 @@ window.onload = function () {
                 </div>
             </div>
 
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="js" height="14" class="item-name-icon"> 
+                    <span>SPLIDE CAROUSEL</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+<a href="https://splidejs.com/guides/getting-started/" target="_blank">https://splidejs.com/guides/getting-started/</a>
+
+
+&lt;section class="splide" aria-label="Splide Basic HTML Example"&gt;
+  &lt;div class="splide__track"&gt;
+		&lt;ul class="splide__list"&gt;
+			&lt;li class="splide__slide">Slide 01&lt;/li&gt;
+			&lt;li class="splide__slide">Slide 02&lt;/li&gt;
+			&lt;li class="splide__slide">Slide 03&lt;/li&gt;
+		&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+var splide = new Splide( '.splide', {
+    perPage: 3,
+    type   : 'loop',
+    perMove: 1,
+});
+if (document.body.clientWidth < 680) {
+    var splide = new Splide( '.splide', {
+        perPage: 1,
+        type   : 'loop',
+        perMove: 1,
+    });
+}
+splide.mount();
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
             <div class="item-card filterPHP">
                 <button class="item-name">
                     <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
