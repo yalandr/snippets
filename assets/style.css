@@ -24,6 +24,9 @@ body {
     color: #fff;
     padding: 2rem 0;
 }
+a {
+    color: #94C379;
+}
 .container {
     width: 90%;
     max-width: 900px;
