@@ -110,6 +110,9 @@ a {
 }
 .item-content {
     max-height: 0;
+    background-color: #35363A;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    border-radius: 0 0 4px 4px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
