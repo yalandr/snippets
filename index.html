@@ -13,14 +13,27 @@
             <h1 class="main-heading">
                 My Useful Snippets
             </h1>
-                <div class="item-card">
-                    <button class="item-name">
-                        JS Accordion
-                    </button>
-                    <div class="item-content">
-                        <div class="code-panel html">
-                            <pre>
-                                <code>
+            <div class="control-panel">
+                <nav class="filter-nav">
+                    <ul class="filter-list">
+                        <li data-filter="all" class="filter-list-item">ALL</li>
+                        <li data-filter="filterHTML" class="filter-list-item html">HTML</li>
+                        <li data-filter="filterCSS" class="filter-list-item css">CSS</li>
+                        <li data-filter="filterJS" class="filter-list-item js">JS</li>
+                        <li data-filter="filterJQUERY" class="filter-list-item jquery">JQUERY</li>
+                        <li data-filter="filterPHP" class="filter-list-item php">PHP</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>Accordion</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
 &lt;button class="accordion">Section 1&lt;/button&gt;
 &lt;div class="panel"&gt;
     &lt;p&gt;Lorem ipsum...&lt;/p&gt;
@@ -29,12 +42,12 @@
 &lt;div class="panel"&gt;
     &lt;p&gt;Lorem ipsum...&lt;/p&gt;
 &lt;/div&gt;
-                                </code>
-                            </pre>
-                        </div>
-                        <div class="code-panel css">
-                            <pre>
-                                <code>
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel css">
+                        <pre>
+                            <code>
 .accordion {
     background-color: #eee;
     color: #444;
@@ -66,35 +79,36 @@
 .active:after {
     content: "\2796";
 }
-                                </code>
-                            </pre>
-                        </div>
-                        <div class="code-panel js">
-                            <pre>
-                                <code>
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
 var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i &lt; acc.length; i++) {
     acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-    } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-    }
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
     });
 }
-                                </code>
-                            </pre>
-                        </div>
+                            </code>
+                        </pre>
                     </div>
                 </div>
+            </div>
             
-            <div class="item-card">
+            <div class="item-card filterJS">
                 <button class="item-name">
-                    ScrollIntoView
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>ScrollIntoView</span> 
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -116,8 +130,11 @@ const scrollToElem = (elem) =&gt; {
                 </div>
             </div>
 
-            <div class="item-card">
-                <button class="item-name">WEBP</button>
+            <div class="item-card filterHTML">
+                <button class="item-name">
+                    <img src="assets/icons/html.png" alt="html" height="14" class="item-name-icon">
+                    <span>WEBP</span> 
+                </button>
                 <div class="item-content">
                     <div class="code-panel html">
                         <pre>
@@ -132,8 +149,11 @@ const scrollToElem = (elem) =&gt; {
                 </div>
             </div>
 
-            <div class="item-card">
-                <button class="item-name">PHP POSTBACK</button>
+            <div class="item-card filterPHP">
+                <button class="item-name">
+                    <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
+                    <span>POSTBACK</span> 
+                </button>
                 <div class="item-content">
                     <div class="code-panel php">
                         <pre>
@@ -150,8 +170,11 @@ $voluum_conv = file_get_contents("https://groasis-guaricet.xyz/postback?cid=".$_
                 </div>
             </div>
 
-            <div class="item-card">
-                <button class="item-name">JS CURRENT DATE</button>
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>CURRENT DATE</span> 
+                </button>
                 <div class="item-content">
                     <div class="code-panel js">
                         <pre>
@@ -162,7 +185,7 @@ let mm = String(today.getMonth() + 1).padStart(2, '0');
 let yyyy = today.getFullYear(); 
 today = mm + '/' + dd + '/' + yyyy; 
 let currentDate = document.querySelectorAll('.current-date'); 
-for (let i = 0; i < currentDate.length; i++) { currentDate[i].innerHTML = today; } 
+for (let i = 0; i &lt; currentDate.length; i++) { currentDate[i].innerHTML = today; } 
                             </code>
                         </pre>
                     </div>
@@ -172,6 +195,349 @@ for (let i = 0; i < currentDate.length; i++) { currentDate[i].innerHTML = today;
 let newData = new Date();
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.querySelector(".current-date").innerHTML = months[newData.getMonth()] + ' ' + newData.getDate();
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>CURRENT YEAR</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+document.querySelector('.year').innerHTML = new Date().getFullYear();
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>RANDOM INTEGER</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+document.querySelector('#randomInteger').innerHTML = Math.floor(Math.random() * 9) + 2;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+const randomInt = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+document.querySelector('#randomInt').innerHTML = randomInt(200, 300);
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>COUNTDOWN 5 MIN</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+document.getElementById('timer').innerHTML = 05 + ":" + 11;
+startTimer();
+
+
+function startTimer() {
+    var presentTime = document.getElementById('timer').innerHTML;
+    var timeArray = presentTime.split(/[:]+/);
+    var m = timeArray[0];
+    var s = checkSecond((timeArray[1] - 1));
+    if(s==59){m=m-1}
+    if(m<0){
+        return
+    }
+
+    document.getElementById('timer').innerHTML =
+        m + ":" + s;
+    setTimeout(startTimer, 1000);
+
+}
+
+function checkSecond(sec) {
+    if (sec &lt; 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers &lt; 10
+    if (sec &lt; 0) {sec = "59"};
+    return sec;
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterJQUERY">
+                <button class="item-name">
+                    <img src="assets/icons/jquery.png" alt="jquery" height="14" class="item-name-icon"> 
+                    <span>COUNTDOWN TO THE END OF AN HOUR</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel jquery">
+                        <pre>
+                            <code>
+$(document).ready(function(){
+
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+        };
+    }
+    
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+    
+        function updateClock() {
+        var t = getTimeRemaining(endtime);
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+        }
+        }
+    
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+    
+    var now = Date.parse(new Date());
+    var seconds = Math.floor((now / 1000) % 60);
+    var minutes = Math.floor((now / 1000 / 60) % 60);
+    var left_to_hour = 60 * 60 * 1000 - (minutes * 60 + seconds) * 1000;
+    // add an hour if 15 minutes or less
+    if (left_to_hour < (15 * 60000)) {
+        left_to_hour += 3600000
+    }
+    // add 100 days
+    var deadline = new Date(now + left_to_hour + 100 * 24 * 60 * 60 * 1000);
+    initializeClock('up-comming-time-2', deadline);
+    
+});
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>COUNTING FROM 0 TO NUMBER ON SCROLL</span>
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;span class="counter" data-to="10" data-stop="0"&gt;10&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+(function(){
+    let counter = document.querySelectorAll('.counter');
+    let limit = 0;
+    window.addEventListener('scroll', function(){  
+        if( limit == counter.length ){ return; }
+        for(let i = 0; i &lt; counter.length; i++){
+        let pos = counter[i].getBoundingClientRect().top;
+        let win = window.innerHeight - 90;
+        if( pos &lt; win && counter[i].dataset.stop === "0" ){
+            counter[i].dataset.stop = 1;
+            let x = 0;
+            limit++;
+            let int = setInterval(function(){
+            x = x + Math.ceil( counter[i].dataset.to / 50 ); 
+            counter[i].innerText = x;
+            if( x > counter[i].dataset.to ){
+                counter[i].innerText = counter[i].dataset.to;
+                clearInterval(int);
+            }
+            }, 60);
+        }
+        }
+    });
+})();
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>ANIMATION ON SCROLL</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel css">
+                        <pre>
+                            <code>
+/*ANIMATIONS*/
+.animated {
+    opacity: 0;
+    transition: .8s;
+}
+.fade-in {
+    opacity: 1;
+}
+@-webkit-keyframes blinking {
+    0% {
+        width: 25%;
+    } 50% {
+        width: 100%;
+    } 100% {
+        width: 25%;
+    }
+}
+@keyframes blinking {
+    0% {
+        width: 25%;
+    } 50% {
+        width: 100%;
+    } 100% {
+        width: 25%;
+    }
+}
+.blinking-lay.fade-in {
+    -webkit-animation-name: blinking;
+            animation-name: blinking;
+    -webkit-animation-duration: .8s;
+            animation-duration: .8s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+let animatedItems = document.querySelectorAll('.animated');
+
+if (animatedItems.length) {
+    function fadeInOnScroll() {
+        for (i = 0; i &lt; animatedItems.length; i++) {
+            let animatedItem = animatedItems[i];
+            let animatedItemHeight = animatedItem.offsetHeight;
+            let animatedItemOffset = offset(animatedItem).top;
+            let animationStart = 2;
+
+            let animatedItemPoint = window.innerHeight - animatedItemHeight / animationStart;
+
+            if (animatedItemHeight > window.innerHeight) {
+                animatedItemPoint = window.innerHeight - window.innerHeight / animationStart;
+            }
+
+            if ((pageYOffset > animatedItemOffset - animatedItemPoint) && pageYOffset &lt; (animatedItemOffset + animatedItemHeight)) {
+                animatedItem.classList.add('fade-in');
+            }
+        }
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+}
+
+window.addEventListener('scroll', fadeInOnScroll);
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>WINNERS WIDGET</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;div class="widget"&gt;
+    &lt;div class="widget-inner"&gt;
+        &lt;div class="content"&gt;
+            &lt;div class="random-user"&gt;
+                &lt;div class="img"&gt;
+                    &lt;img id="winnerImg" alt="Photo" width="57" height="57" src="assets/img/ui-names/photos/male/23.jpg"&gt;
+                &lt;/div&gt;
+                &lt;div class="user-info"&gt;
+                    &lt;span class="name" id="winnerName"&gt;Leo&lt;/span&gt;
+                    &lt;spam&gt;acaba de ganar&lt;/spam&gt;
+                    &lt;span class="profit"&gt;
+                        &lt;span class="currency"&gt;$&lt;/span&gt; 
+                        &lt;span id="winnerProfit"&gt;375.80&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+let winnersData = [
+    {"name":"Nadine","surname":"Nelson","photo":"/assets/img/ui-names/photos/female/21.jpg","profit":"575.80"},
+    {"name":"Alice","surname":"Smith","photo":"/assets/img/ui-names/photos/female/18.jpg","profit":"315.20"},
+    {"name":"Steffi","surname":"Williams","photo":"/assets/img/ui-names/photos/female/9.jpg","profit":"455.10"}
+];
+
+let index = 0;
+const winnerName = document.querySelector('#winnerName');
+const winnerImg = document.querySelector('#winnerImg');
+const winnerProfit = document.querySelector('#winnerProfit');
+
+function change() {
+    winnerName.innerHTML = winnersData[index].name;
+    winnerImg.src = winnersData[index].photo;
+    winnerProfit.innerHTML = winnersData[index].profit;
+    index > (winnersData.length - 2) ? index = 0 : index++;
+}
+
+window.onload = function () {
+    setInterval(change, 1000);
+};
                             </code>
                         </pre>
                     </div>
