@@ -181,19 +181,9 @@ body {
     line-height: 1.5;
 }
 .hide {
-    animation-name: hiding;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    max-height: 0 !important;
-    margin-bottom: 0 !important;
-}
-@keyframes hiding {
-    100% {
-        opacity: 0;
-        min-height: 0;
-        max-width: 0;
-        padding: 0;
-        margin-bottom: 0 !important ;
-        border: 0;
-    }
+    opacity: 0;
+    transform: translateX(200%);
+    height: 0;
+    margin-bottom: 0;
+    transition: .8s;
 }
