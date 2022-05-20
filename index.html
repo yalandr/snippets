@@ -582,6 +582,115 @@ splide.mount();
                 </div>
             </div>
 
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="js" height="14" class="item-name-icon"> 
+                    <span>RANGE SLIDER</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;div class="pricing-range-wrapper"&gt;
+	&lt;input type="range" min="0" max="210" value="105" class="pricing-range-input"&gt;
+	&lt;div class="range-input-value">&lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel css">
+                        <pre>
+                            <code>
+.pricing-range-input {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: linear-gradient(154.24deg, #85FED6 4.45%, #4EDAAC 83.73%);
+    background-blend-mode: luminosity;
+    mix-blend-mode: normal;
+    box-shadow: 1px 5px 30px rgba(83, 215, 171, 0.5);
+    border-radius: 10px;
+}
+.pricing-range-wrapper {
+    width: 100%;
+    height: 10px;
+    margin-bottom: 5rem;
+    position: relative;
+}
+.pricing-range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(154.24deg, #85FED6 4.45%, #4EDAAC 83.73%);
+    background-blend-mode: luminosity;
+    mix-blend-mode: normal;
+    border: 3px solid #FFFFFF;
+    box-shadow: 1px 5px 30px rgba(83, 215, 171, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pricing-range-input::-moz-range-thumb {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(154.24deg, #85FED6 4.45%, #4EDAAC 83.73%);
+    background-blend-mode: luminosity;
+    mix-blend-mode: normal;
+    border: 3px solid #FFFFFF;
+    box-shadow: 1px 5px 30px rgba(83, 215, 171, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.range-input-value {
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    width: 82px;
+    height: 35px;
+    background: #282323;
+    border-radius: 3px;
+    color: #fff;
+    display: grid;
+    place-items: center center;
+    transform:translateX(-50%);
+}
+.range-input-value::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #282323;
+	-webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+	        clip-path: polygon(0 0, 100% 0, 50% 100%);
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: -10px;
+}
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+let slider = document.querySelector(".pricing-range-input");
+let output = document.querySelector(".range-input-value");
+output.innerHTML = slider.value;
+
+slider.oninput = function () {
+    output.innerHTML = this.value;
+    output.style.left = `${this.value / 2.12}%`;
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
             <div class="item-card filterPHP">
                 <button class="item-name">
                     <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
