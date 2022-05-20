@@ -691,6 +691,148 @@ slider.oninput = function () {
                 </div>
             </div>
 
+            <div class="item-card filterJQUERY">
+                <button class="item-name">
+                    <img src="assets/icons/jquery.png" alt="jquery" height="14" class="item-name-icon"> 
+                    <span>RANGE SLIDER</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;form action="javascript:void(0)" class="profit-calculator-wrapper animated"&gt;
+	&lt;h3 class="invest-heading"&gt;tu inversión:&lt;/h3&gt;
+	&lt;div class="your-invest"&gt;
+		&lt;input type="text" class="js-range-slider irs-hidden-input" name="my_range" value="150" tabindex="-1" readonly="" /&gt;
+	&lt;/div&gt;
+	&lt;div class="your-profit"&gt;
+		&lt;label class="profit-label"&gt;Sus ganancias:&lt;/label&gt;
+		&lt;h3 id="calcResult">&lt;/h3&gt;
+	&lt;/div&gt;
+	&lt;div class="range-btn"&gt;
+		&lt;button class="btn" onclick="scrollToForm()"&gt;
+			obtener beneficios ahora
+		&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel css">
+                        <pre>
+                            <code>
+.profit-calculator-wrapper {
+    max-width: 765px;
+    text-align: center;
+    margin: 2.25rem auto 0 auto;
+}
+.invest-heading {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #110804;
+}
+.your-invest {
+    background-color: #FFFFFF;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    padding: 2rem;
+}
+.profit-calculator-wrapper .irs--round .irs-bar {
+    background-color: #F6CD2F !important;
+}
+.profit-calculator-wrapper .irs--round .irs-single {
+    font-size: 14px;
+    text-shadow: none;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #F6CD2F;
+}
+.profit-calculator-wrapper .irs--round .irs-single:before {
+    border-top-color: transparent;
+}
+.profit-calculator-wrapper .irs--round .irs-handle {
+    border: 4px solid #F6CD2F;
+    cursor: grab  
+}
+.profit-calculator-wrapper .irs--round .irs-grid-text {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #4B423E;
+} 
+.irs--round .irs-min, .irs--round .irs-max {
+    display: none;
+}
+.your-invest {
+    margin-bottom: 2rem;
+}
+.your-invest input {
+    display: none;
+}
+.profit-label {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #110804;
+}
+#calcResult {
+    font-weight: 800;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #F6CD2F;
+    text-shadow: 0px 2px 3px #000000;
+    margin: 1.5rem 0 3rem 0 !important;
+}
+.range-btn .btn {
+    background-color: #EAAB00;
+}
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel jquery">
+                        <pre>
+                            <code>
+$(document).ready(function () {
+	$(function () {
+		let curCurency = '<span id="curency"> $</span>';
+		$(".js-range-slider").ionRangeSlider({
+			skin: "round",
+			min: 345,
+			max: 2000,
+			from: 1000,
+			max_postfix: "+",
+			postfix: " $",
+			grid: true,
+			onStart: function (data) {
+				$("#calcResult").html(
+					Math.round(data.from * 23.2 + data.from) + curCurency,
+				);
+			},
+			onChange: function (data) {
+				$("#calcResult").html(
+					Math.round(data.from * 23.2 + data.from) + curCurency,
+				);
+			},
+		});
+	});
+});
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
             <div class="item-card filterPHP">
                 <button class="item-name">
                     <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
