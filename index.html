@@ -25,6 +25,26 @@
                     </ul>
                 </nav>
             </div>
+
+            <div class="item-card filterHTML">
+                <button class="item-name">
+                    <img src="assets/icons/html.png" alt="html" height="14" class="item-name-icon">
+                    <span>WEBP</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;picture&gt;
+    &lt;source srcset="/path/to/image.webp" type="image/webp"&gt;
+    &lt;img src="/path/to/image.jpg" alt="insert alt text here"&gt;
+&lt;/picture&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            
             <div class="item-card filterJS">
                 <button class="item-name">
                     <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
@@ -124,46 +144,6 @@ for (i = 0; i &lt; acc.length; i++) {
 const scrollToElem = (elem) =&gt; {
     document.querySelector(elem).scrollIntoView({behavior:"smooth"});
 }
-                            </code>
-                        </pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-card filterHTML">
-                <button class="item-name">
-                    <img src="assets/icons/html.png" alt="html" height="14" class="item-name-icon">
-                    <span>WEBP</span> 
-                </button>
-                <div class="item-content">
-                    <div class="code-panel html">
-                        <pre>
-                            <code>
-&lt;picture&gt;
-    &lt;source srcset="/path/to/image.webp" type="image/webp"&gt;
-    &lt;img src="/path/to/image.jpg" alt="insert alt text here"&gt;
-&lt;/picture&gt;
-                            </code>
-                        </pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-card filterPHP">
-                <button class="item-name">
-                    <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
-                    <span>POSTBACK</span> 
-                </button>
-                <div class="item-content">
-                    <div class="code-panel php">
-                        <pre>
-                            <code>
-// в сенкью-пейдже
-// добавляется саб для клика
-'sub8'=> $_GET['click'],
-
-// а потом функция, которая передает этот клик в трекер
-$voluum_conv = file_get_contents("https://groasis-guaricet.xyz/postback?cid=".$_GET['click'].'&et=lead');
                             </code>
                         </pre>
                     </div>
@@ -550,6 +530,27 @@ function change() {
 window.onload = function () {
     setInterval(change, 1000);
 };
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterPHP">
+                <button class="item-name">
+                    <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
+                    <span>POSTBACK</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel php">
+                        <pre>
+                            <code>
+// в сенкью-пейдже
+// добавляется саб для клика
+'sub8'=> $_GET['click'],
+
+// а потом функция, которая передает этот клик в трекер
+$voluum_conv = file_get_contents("https://groasis-guaricet.xyz/postback?cid=".$_GET['click'].'&et=lead');
                             </code>
                         </pre>
                     </div>
