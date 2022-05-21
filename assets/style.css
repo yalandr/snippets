@@ -37,7 +37,11 @@ a {
     background: -webkit-linear-gradient(45deg, #42D392, #5F8BEF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+}
+.author {
+    font-size: 0.7rem;  
+    margin-bottom: 1rem; 
 }
 
 /*==== FILTER-LIST ================*/
