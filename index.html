@@ -223,6 +223,7 @@ $('.year').html(new Date().getFullYear());
                     <div class="code-panel js">
                         <pre>
                             <code>
+// from 2 to 9
 document.querySelector('#randomInteger').innerHTML = Math.floor(Math.random() * 9) + 2;
                             </code>
                         </pre>
@@ -230,6 +231,7 @@ document.querySelector('#randomInteger').innerHTML = Math.floor(Math.random() * 
                     <div class="code-panel js">
                         <pre>
                             <code>
+// from min to max
 const randomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -275,6 +277,108 @@ function checkSecond(sec) {
     if (sec &lt; 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers &lt; 10
     if (sec &lt; 0) {sec = "59"};
     return sec;
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                    <span>Countdown with LocalStorage</span> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;div class="counter-wrapper"&gt;
+	&lt;div class="numbers-wrapper"&gt;
+	    &lt;div class="numbers-block-outer"&gt;
+		&lt;div class="numbers-block-inner"&gt;
+		    &lt;span class="current-number hours"&gt;23&lt;/span&gt; 
+		&lt;/div&gt;
+	    &lt;/div&gt;
+	    &lt;span class="time-measure hours-span"&gt;hh&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="numbers-wrapper"&gt;
+	    &lt;div class="numbers-block-outer"&gt;
+		&lt;div class="numbers-block-inner"&gt;
+		    &lt;span class="current-number minutes"&gt;59&lt;/span&gt; 
+		&lt;/div&gt;
+	    &lt;/div&gt;
+	    &lt;span class="time-measure minutes-span"&gt;mm&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="numbers-wrapper"&gt;
+	    &lt;div class="numbers-block-outer"&gt;
+		&lt;div class="numbers-block-inner"&gt;
+		    &lt;span class="current-number seconds">59&lt;/span&gt; 
+		&lt;/div&gt;
+	    &lt;/div&gt;
+	    &lt;span class="time-measure seconds-span"&gt;ss&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+var localStorage = window.localStorage,
+          startDate;
+    
+if (localStorage.getItem('startDate')) {
+  startDate = localStorage.getItem('startDate')
+} else {
+  startDate = new Date();
+  localStorage.setItem('startDate', startDate)
+}
+setTimer(startDate);
+
+function setTimer(startDate) {
+  var deadline = new Date(Date.parse(startDate) + 01 * 24 * 60 * 60 * 1000);
+  initializeClock('countdown', deadline);
+}
+
+// Countdown
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  return {
+     'total': t,
+     'hours': hours,
+     'minutes': minutes,
+     'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.querySelector('.counter-wrapper');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+     var t = getTimeRemaining(endtime);
+
+     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+     if (t.total <= 0) {
+	   startDate = new Date()
+	   localStorage.setItem('startDate', startDate)
+	   var deadline = new Date(Date.parse(startDate) + 24 * 60 * 60 * 1000);
+	   initializeClock('countdown', deadline);
+	   clearInterval(timeinterval);
+     }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
 }
                             </code>
                         </pre>
