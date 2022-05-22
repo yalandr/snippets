@@ -30,8 +30,10 @@
 
             <div class="item-card filterHTML">
                 <button class="item-name">
-                    <img src="assets/icons/html.png" alt="html" height="14" class="item-name-icon">
-                    <span>WEBP</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/html.png" alt="html" height="22" class="item-name-icon">
+                        <span>WEBP</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -46,11 +48,50 @@
                     </div>
                 </div>
             </div>
+
+            <div class="item-card filterCSS">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/css.png" alt="css" height="22" class="item-name-icon">
+                        <span>CSS Animation</span> 
+                    </div>
+                </button>
+                <div class="item-content">
+                    <div class="code-panel css">
+                        <pre>
+                            <code>
+.your-class {
+    background-color: red;
+    background-image: -webkit-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+    background-image:    -moz-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+    background-image:      -o-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+    background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+    color: white;
+    height: 100%;
+    width: 20%;
+    
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+        -moz-animation: 4s linear 0s infinite alternate move_eye;
+            -o-animation: 4s linear 0s infinite alternate move_eye;
+            animation: 4s linear 0s infinite alternate move_eye;
+    }
+    
+    @-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+        @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+        @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+            @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
             
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>Accordion</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>Accordion</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -129,8 +170,10 @@ for (i = 0; i &lt; acc.length; i++) {
             
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>ScrollIntoView</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>ScrollIntoView</span>
+                    </div> 
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -154,8 +197,10 @@ const scrollToElem = (elem) =&gt; {
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>CURRENT DATE</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>CURRENT DATE</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel js">
@@ -185,8 +230,10 @@ document.querySelector(".current-date").innerHTML = months[newData.getMonth()] +
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>CURRENT YEAR</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>CURRENT YEAR</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel js">
@@ -201,8 +248,10 @@ document.querySelector('.year').innerHTML = new Date().getFullYear();
 
             <div class="item-card filterJQUERY">
                 <button class="item-name">
-                    <img src="assets/icons/jquery.png" alt="jquery" height="14" class="item-name-icon"> 
-                    <span>CURRENT YEAR</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/jquery.png" alt="jquery" height="14" class="item-name-icon"> 
+                        <span>CURRENT YEAR</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel jquery">
@@ -217,8 +266,10 @@ $('.year').html(new Date().getFullYear());
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>RANDOM INTEGER</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>RANDOM INTEGER</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel js">
@@ -247,8 +298,10 @@ document.querySelector('#randomInt').innerHTML = randomInt(200, 300);
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>COUNTDOWN 5 MIN</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>COUNTDOWN 5 MIN</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel js">
@@ -287,8 +340,10 @@ function checkSecond(sec) {
             
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>Countdown with LocalStorage</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>Countdown with LocalStorage</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -389,8 +444,10 @@ function initializeClock(id, endtime) {
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>COUNTDOWN TO THE END OF AN HOUR</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>COUNTDOWN TO THE END OF AN HOUR</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel js">
@@ -452,8 +509,10 @@ initializeClock('up-comming-time-2', deadline);
             
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>Animated Counting on Scroll</span>
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>Animated Counting on Scroll</span>
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -498,8 +557,10 @@ initializeClock('up-comming-time-2', deadline);
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>ANIMATION ON SCROLL</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>ANIMATION ON SCROLL</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel css">
@@ -583,8 +644,10 @@ window.addEventListener('scroll', fadeInOnScroll);
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
-                    <span>WINNERS WIDGET</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>WINNERS WIDGET</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -644,8 +707,10 @@ window.onload = function () {
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="js" height="14" class="item-name-icon"> 
-                    <span>SPLIDE CAROUSEL</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="js" height="14" class="item-name-icon"> 
+                        <span>SPLIDE CAROUSEL</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -690,8 +755,10 @@ splide.mount();
 
             <div class="item-card filterJS">
                 <button class="item-name">
-                    <img src="assets/icons/js.png" alt="js" height="14" class="item-name-icon"> 
-                    <span>RANGE SLIDER</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="js" height="14" class="item-name-icon"> 
+                        <span>RANGE SLIDER</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -799,8 +866,10 @@ slider.oninput = function () {
 
             <div class="item-card filterJQUERY">
                 <button class="item-name">
-                    <img src="assets/icons/jquery.png" alt="jquery" height="14" class="item-name-icon"> 
-                    <span>RANGE SLIDER</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/jquery.png" alt="jquery" height="14" class="item-name-icon"> 
+                        <span>RANGE SLIDER</span> 
+                    </div>
                 </button>
                 <div class="item-content">
                     <div class="code-panel html">
@@ -943,8 +1012,10 @@ $(document).ready(function () {
 
             <div class="item-card filterPHP">
                 <button class="item-name">
-                    <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
-                    <span>POSTBACK</span> 
+                    <div class="name-wrapper">
+                        <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
+                        <span>POSTBACK</span>
+                    </div> 
                 </button>
                 <div class="item-content">
                     <div class="code-panel php">
