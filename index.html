@@ -641,6 +641,53 @@ window.addEventListener('scroll', fadeInOnScroll);
                     </div>
                 </div>
             </div>
+            
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>Lazy Loading Images</span>
+                    </div> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;img loading="lazy" src="assets/img/loading.gif" data-src="assets/img/image.jpg" alt=""&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+// Lazy Loading Images
+function isVisible(elem) {
+    let coords = elem.getBoundingClientRect();
+    let windowHeight = document.documentElement.clientHeight;
+    let topVisible = coords.top > 0 && coords.top < windowHeight;
+    let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+    return topVisible || bottomVisible;
+}
+
+function showVisible() {
+    for (let img of document.querySelectorAll('img')) {
+        let realSrc = img.dataset.src;
+        if (!realSrc) continue;
+
+        if (isVisible(img)) {
+            img.src = realSrc;
+            img.dataset.src = '';
+        }
+    }
+}
+
+showVisible();
+window.onscroll = showVisible;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
 
             <div class="item-card filterJS">
                 <button class="item-name">
