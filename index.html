@@ -32,7 +32,7 @@
                 <button class="item-name">
                     <div class="name-wrapper">
                         <img src="assets/icons/html.png" alt="html" height="22" class="item-name-icon">
-                        <span>WEBP</span> 
+                        <span>WEBP If Supporting</span> 
                     </div>
                 </button>
                 <div class="item-content">
@@ -304,11 +304,11 @@ dialog::backdrop {
                     <div class="code-panel html">
                         <pre>
                             <code>
-&lt;button class="accordion">Section 1&lt;/button&gt;
+&lt;button class="accordion"&gt;Section 1&lt;/button&gt;
 &lt;div class="panel"&gt;
     &lt;p&gt;Lorem ipsum...&lt;/p&gt;
 &lt;/div&gt;
-&lt;button class="accordion">Section 1&lt;/button&gt;
+&lt;button class="accordion"&gt;Section 2&lt;/button&gt;
 &lt;div class="panel"&gt;
     &lt;p&gt;Lorem ipsum...&lt;/p&gt;
 &lt;/div&gt;
@@ -1260,6 +1260,58 @@ $(document).ready(function () {
 		});
 	});
 });
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterPHP">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/php.png" alt="php" height="14" class="item-name-icon"> 
+                        <span>TEST FORM SENDING</span>
+                    </div> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel php">
+                        <pre>
+                            <code>
+&lt;?php
+ini_set("default_charset", 'utf-8');
+date_default_timezone_set('Europe/Kiev');
+$post = !empty($_POST);
+if ($post) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $sub = "Заявка с сайта";
+    $error = '';
+
+    if (!$name) {
+        $error .= 'Укажите ФИО. ';
+    }
+    if (!$email) {
+        $error .= 'Укажите Email. ';
+    }
+
+    if (!$error) {
+        $address = "testing-email@gmail.com";
+        $mes = "Дата: " . date('d.m.y H:i') .
+            "\nИмя: " . $name .
+            "\nEmail: " . $email .
+            "\nСообщение: " . $message;
+        $send = mail($address, $sub, $mes);
+        if ($send) {
+            echo 'success';
+        } else {
+            echo $error;
+        }
+    } else {
+        echo $error;
+    }
+}
                             </code>
                         </pre>
                     </div>

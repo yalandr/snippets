@@ -92,6 +92,7 @@ a {
     align-items: center;
     justify-content: space-between;
     background-color: #715BA5;
+    font-family: 'Barlow', sans-serif;
     color: #fff;
     font-size: .8rem;
     font-weight: 700;
@@ -205,8 +206,9 @@ a {
     line-height: 1.5;
 }
 .hide {
+    position: relative;
+    z-index: -3;
     opacity: 0;
-    transform: translateX(200%);
     height: 0;
     margin-bottom: 0;
     transition: .8s;
