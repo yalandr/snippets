@@ -22,7 +22,7 @@ body {
     overflow-x: hidden;
     background-color: #1A1A1A;
     color: #fff;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 a {
     color: #94C379;
@@ -126,6 +126,12 @@ a {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+.item-content a {
+    display: block;
+    margin: 0.8rem 0;
+    word-break: break-all;
+    font-size: 12px;
+}
 .item-name:after {
     content: '+';
     font-size: 1rem;
@@ -143,7 +149,6 @@ a {
     margin: .5rem 0;
     padding: 0 1rem;
     position: relative;
-    overflow-x: scroll;
 }
 .code-panel::before {
     position: absolute;
@@ -190,6 +195,9 @@ a {
 .code-panel.php::before {
     content: 'php';
     background-color: var(--php);
+}
+.code-panel pre {
+    overflow-x: scroll;
 }
 .code-panel code {
     font-family: 'Inconsolata', monospace !important;

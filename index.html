@@ -49,6 +49,142 @@
                 </div>
             </div>
 
+            <div class="item-card filterHTML">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/html.png" alt="html" height="22" class="item-name-icon">
+                        <span>Time Tag (Better for SEO)</span> 
+                    </div>
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;time class="article-date" datetime="2022-01-01"&gt;
+    January 1, 2022
+&lt;/time&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterHTML">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/html.png" alt="html" height="22" class="item-name-icon">
+                        <span>Running String</span> 
+                    </div>
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;marquee class="running-string"&gt;
+    Lorem ipsum dolor sit amet.
+&lt;/marquee&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterHTML">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/html.png" alt="html" height="22" class="item-name-icon">
+                        <span>Native Autocomplete</span> 
+                    </div>
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;label for="option"&gt;Choose an option:&lt;/label&gt;
+&lt;input list="option"&gt;
+
+&lt;datalist id="option"&gt;
+    &lt;option value="first option"&gt;&lt;/option&gt;
+    &lt;option value="second option"&gt;&lt;/option&gt;
+    &lt;option value="third option"&gt;&lt;/option&gt;
+&lt;/datalist&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterHTML">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/html.png" alt="html" height="22" class="item-name-icon">
+                        <span>Native Accordion</span> 
+                    </div>
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;details&gt;
+    &lt;summary&gt;Yo wassup??&lt;/summary&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+    &lt;summary&gt;How come??&lt;/summary&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+    &lt;summary&gt;What do you hear? What do you say?&lt;/summary&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/details&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterHTML">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/html.png" alt="html" height="22" class="item-name-icon">
+                        <span>Native Dialog</span> 
+                    </div>
+                </button>
+                <div class="item-content">
+                    <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/dialog" target="_blank">https://developer.mozilla.org/ru/docs/Web/HTML/Element/dialog</a>
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+
+&lt;div class="page-wrapper"&gt;
+    &lt;button onclick="window.dialog.showModal();"&gt;Show Dialog&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;dialog id="dialog"&gt;
+    &lt;form method="dialog"&gt;
+      &lt;h2&gt;Dialog Heading&lt;/h2&gt;
+      &lt;p&gt;Dialog text&lt;/p&gt;
+      &lt;menu&gt;
+        &lt;button&gt;Yah.&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+&lt;/dialog&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel css">
+                        <pre>
+                            <code>
+dialog::backdrop {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
             <div class="item-card filterCSS">
                 <button class="item-name">
                     <div class="name-wrapper">
@@ -240,24 +376,6 @@ document.querySelector(".current-date").innerHTML = months[newData.getMonth()] +
                         <pre>
                             <code>
 document.querySelector('.year').innerHTML = new Date().getFullYear();
-                            </code>
-                        </pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-card filterJQUERY">
-                <button class="item-name">
-                    <div class="name-wrapper">
-                        <img src="assets/icons/jquery.png" alt="jquery" height="14" class="item-name-icon"> 
-                        <span>CURRENT YEAR</span> 
-                    </div>
-                </button>
-                <div class="item-content">
-                    <div class="code-panel jquery">
-                        <pre>
-                            <code>
-$('.year').html(new Date().getFullYear());
                             </code>
                         </pre>
                     </div>
@@ -664,8 +782,8 @@ window.addEventListener('scroll', fadeInOnScroll);
 function isVisible(elem) {
     let coords = elem.getBoundingClientRect();
     let windowHeight = document.documentElement.clientHeight;
-    let topVisible = coords.top > 0 && coords.top < windowHeight;
-    let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+    let topVisible = coords.top > 0 && coords.top &lt; windowHeight;
+    let bottomVisible = coords.bottom &lt; windowHeight && coords.bottom > 0;
     return topVisible || bottomVisible;
 }
 
@@ -760,12 +878,10 @@ window.onload = function () {
                     </div>
                 </button>
                 <div class="item-content">
+                    <a href="https://splidejs.com/guides/getting-started/" target="_blank">https://splidejs.com/guides/getting-started/</a>
                     <div class="code-panel html">
                         <pre>
                             <code>
-<a href="https://splidejs.com/guides/getting-started/" target="_blank">https://splidejs.com/guides/getting-started/</a>
-
-
 &lt;section class="splide" aria-label="Splide Basic HTML Example"&gt;
   &lt;div class="splide__track"&gt;
 		&lt;ul class="splide__list"&gt;
@@ -905,6 +1021,24 @@ slider.oninput = function () {
     output.innerHTML = this.value;
     output.style.left = `${this.value / 2.12}%`;
 }
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card filterJQUERY">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/jquery.png" alt="jquery" height="14" class="item-name-icon"> 
+                        <span>CURRENT YEAR</span> 
+                    </div>
+                </button>
+                <div class="item-content">
+                    <div class="code-panel jquery">
+                        <pre>
+                            <code>
+$('.year').html(new Date().getFullYear());
                             </code>
                         </pre>
                     </div>

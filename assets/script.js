@@ -27,7 +27,29 @@ document.addEventListener("DOMContentLoaded", () => {
 					elem.classList.add('hide');
 				}
 			})
-
 		})
+
+    /*==== Copy ===================*/
+    function copyCode() {
+      var codePanel = document.querySelectorAll('code');
+      codePanel[i].setAttribute('title', 'Click to copy');
+
+      for (let i=0; i<codePanel.length; i++) {
+        codePanel[i].setAttribute('title', 'Click to copy');
+        codePanel[i].onclick = function() {
+          document.execCommand("copy");
+        }
+
+        codePanel[i].addEventListener("copy", function(event) {
+          event.preventDefault();
+          if (event.clipboardData) {
+            event.clipboardData.setData("text/plain", codePanel[i].textContent);
+          }
+        })
+      }
+    }
+
+    copyCode();
+
 });
 
