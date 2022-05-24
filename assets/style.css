@@ -91,7 +91,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1877F2;
+    background-color: #5D92D6;
     font-family: 'Barlow', sans-serif;
     color: #fff;
     font-size: .8rem;
@@ -108,7 +108,7 @@ a {
     transition: 0.2s;
 }
 .active, .item-name:hover {
-    background-color: #56467D;
+    background-color: #4E76AA;
 }
 .name-wrapper {
     display: flex;
