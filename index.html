@@ -486,6 +486,27 @@ document.querySelector('#randomInt').innerHTML = randomInt(200, 300);
                     </div>
                 </div>
             </div>
+            
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>Sticky Header on Scroll</span>
+                    </div> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    header.classList.toggle('sticky', window.scrollY &gt; 0);
+})
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
 
             <div class="item-card filterJS">
                 <button class="item-name">
