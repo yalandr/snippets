@@ -507,6 +507,66 @@ window.addEventListener('scroll', function() {
                     </div>
                 </div>
             </div>
+            
+            <div class="item-card filterJS">
+                <button class="item-name">
+                    <div class="name-wrapper">
+                        <img src="assets/icons/js.png" alt="javascript" height="14" class="item-name-icon"> 
+                        <span>Menu Items Highlighting on Scroll</span>
+                    </div> 
+                </button>
+                <div class="item-content">
+                    <div class="code-panel html">
+                        <pre>
+                            <code>
+&lt;ul class="nav-list"&gt;
+	&lt;li class="nav-list-item about active"&gt;About&lt;/li&gt;
+	&lt;li class="nav-list-item services"&gt;Services&lt;/li&gt;
+	&lt;li class="nav-list-item reviews"&gt;Reviews&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;section id="about"&gt;
+	About
+&lt;/section&gt;
+&lt;section id="services"&gt;
+	Services
+&lt;/section&gt;
+&lt;section id="reviews"&gt;
+	Reviews
+&lt;/section&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code-panel js">
+                        <pre>
+                            <code>
+// MENU ITEMS HIGHLIGHTING
+const sections = document.querySelectorAll('section');
+const navListItems = document.querySelectorAll('.nav-list-item');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach( section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - sectionHeight)) {
+            current = section.getAttribute('id');
+        }
+    })
+
+    navListItems.forEach( item => {
+        item.classList.remove('active');
+        if (item.classList.contains(current)) {
+            item.classList.add('active');
+        }
+    })
+})
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
 
             <div class="item-card filterJS">
                 <button class="item-name">
