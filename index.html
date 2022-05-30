@@ -223,7 +223,26 @@ dialog::backdrop {
 
 }
 .form .checkbox-wrap {
-    
+    display: flex;
+}
+.form .checkbox-wrap input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.form .checkbox-wrap input::before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: .8rem;
+    height: .8rem;
+    background-color: #EABC49;
+    border-radius: 2px;
+}
+.form .checkbox-wrap input:checked::before {
+    content: '\2713';
 }
 .form .checkbox-wrap label {
     
